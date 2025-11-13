@@ -2,9 +2,13 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package.json package-lock.json* ./
-RUN npm ci --production
+# Only copy package.json first
+COPY package.json ./
 
+# Install production dependencies WITHOUT lockfile
+RUN npm install --omit=dev
+
+# Copy rest of the code
 COPY . .
 
 ENV PORT=8080
