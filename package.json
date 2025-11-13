@@ -1,0 +1,17 @@
+{
+  "name": "better-auth-backend",
+  "version": "1.0.0",
+  "description": "Firebase + Neon auth backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "firebase-admin": "^11.10.0",
+    "pg": "^8.11.0",
+    "cors": "^2.8.5",
+    "pino": "^8.14.0"
+  }
+}
